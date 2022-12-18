@@ -5,6 +5,9 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
 }
 
 .container div {
@@ -15,8 +18,28 @@
   color: white;
 }
 
+li {
+  list-style: none; 
+  align-self: center;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 100%;
+}
+
 .header {
   background-color: #393f4d;
+  grid-column: 1 /-1;
+  grid-row: 1 / 1;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 .menu ul,
@@ -26,6 +49,9 @@
 
 .sidebar {
   background-color: #FF7755;
+  grid-row: 2 / 4;
+  display: grid;
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -46,6 +72,8 @@
 
 .nav {
   background-color: #FF7755;
+  grid-column: 2;
+  grid-template-rows: 2 / 2;
 }
 
 .nav ul li {
@@ -55,6 +83,10 @@
 
 .article {
   background-color: #bccbde;
+  grid-column: 2 / -1;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .article p {
@@ -68,6 +100,7 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
 }
 
 .card p {
@@ -83,6 +116,7 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / -1;
 }
 
 .footer p {
